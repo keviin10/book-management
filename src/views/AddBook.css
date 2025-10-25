@@ -1,0 +1,150 @@
+.add-book-page {
+  background-color: #f4f8fc;
+  padding: 60px 10%;
+  font-family: "Poppins", sans-serif;
+  margin-top: 20px;
+}
+
+.add-book-page h1 {
+  color: #0a3d62;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.mini-title {
+  color: #555;
+  margin-bottom: 40px;
+  font-size: 1.1rem;
+}
+
+.add-book-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Form rows for grouping */
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group.full-width {
+  flex: 1 1 100%;
+}
+
+.add-book-form label {
+  font-weight: 600;
+  color: #0a3d62;
+  margin-bottom: 5px;
+}
+
+.add-book-form input,
+.add-book-form select,
+.add-book-form textarea {
+  padding: 12px 15px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #fff;
+}
+
+.add-book-form input:focus,
+.add-book-form select:focus,
+.add-book-form textarea:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 8px rgba(52, 152, 219, 0.3);
+}
+
+/* File upload box */
+.file-upload-box {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  background-color: #fff;
+  transition: border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.file-upload-box input[type="file"] {
+  display: none;
+}
+
+.file-upload-box .upload-link {
+  color: #1e5f74;
+  cursor: pointer;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.file-upload-box:hover {
+  border-color: #3498db;
+  background-color: #eef6fb;
+}
+
+.buttonn {
+  margin-top: 20px;
+}
+
+.add-book-form button {
+  background-color: #1e5f74;
+  color: white;
+  border: none;
+  padding: 14px 30px;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 100%;
+}
+
+.add-book-form button:hover {
+  background-color: #3498db;
+  transform: scale(1.02);
+}
+
+.file-upload-box input[type="file"] {
+  display: none;
+}
+
+.upload-button {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.upload-button:hover {
+  background-color: #2980b9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .add-book-page {
+    padding: 40px 5%;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-group {
+    min-width: 100%;
+  }
+}

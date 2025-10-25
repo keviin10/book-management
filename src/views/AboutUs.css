@@ -1,0 +1,276 @@
+.about-page {
+  background-color: #f4f8fc;
+  color: #333;
+  padding: 60px 10%;
+  font-family: "Poppins", sans-serif;
+  transition: all 0.3s ease-in-out;
+  margin-top:20px;
+}
+
+/* Intro Section */
+.about-intro {
+  text-align: center;
+  margin-bottom: 80px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-intro:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.about-intro h1 {
+  font-size: 2.8rem;
+  color: #0a3d62;
+  margin-bottom: 20px;
+}
+
+.about-intro p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+/* Story Section */
+.about-story {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 100px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-story:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.story-text {
+  flex: 1;
+  min-width: 320px;
+  padding-right: 40px;
+}
+
+.story-text h2 {
+  font-size: 2rem;
+  color: #1e5f74;
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+  margin-left:15px;
+}
+
+.story-text h2:hover {
+  color: #3498db;
+}
+
+.story-text p {
+  font-size: 1.05rem;
+  color: #555;
+  line-height: 1.8;
+  margin-bottom: 30px;
+  margin-left:15px;
+}
+
+.story-text ul {
+  list-style: none;
+  padding: 0;
+  margin-left:15px;
+}
+
+.story-text li {
+  margin-bottom: 12px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease, color 0.3s ease;
+  margin-left:15px;
+}
+
+.story-text li:hover {
+  transform: translateX(5px);
+  color: #1e5f74;
+}
+
+.story-text span {
+  margin-right: 10px;
+  color: #27ae60;
+  font-size: 1.2rem;
+}
+
+.story-image {
+  flex: 1;
+  text-align: center;
+  margin-top:40px;
+  margin-bottom:40px;
+}
+
+.aboutus-image {
+  width: 80%;
+  max-width: 400px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.aboutus-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Team Section */
+.about-team {
+  text-align: center;
+}
+
+.about-team h2 {
+  font-size: 2.4rem;
+  color: #0a3d62;
+  margin-bottom: 20px;
+  transition: color 0.3s ease;
+}
+
+.about-team h2:hover {
+  color: #1e90ff;
+}
+
+.about-team p {
+  color: #666;
+  margin-bottom: 50px;
+}
+
+.team-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.team-member {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+.team-member img {
+  width: 70%;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  transition: transform 0.4s ease;
+}
+
+.team-member:hover img {
+  transform: scale(1.05);
+}
+
+.team-member h3 {
+  color: #1e5f74;
+  margin-bottom: 8px;
+  transition: color 0.3s ease;
+}
+
+.team-member:hover h3 {
+  color: #3498db;
+}
+
+.team-member .title {
+  font-size: 0.95rem;
+  color: #888;
+}
+
+.member-title {
+  font-size: 0.85rem;
+  color: #1e5f74;
+  margin-top: 5px;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.member-title.show {
+  max-height: 100px; /* enough for content */
+  opacity: 1;
+}
+
+.member-card {
+  margin-top: 10px;
+  padding: 15px;
+  background-color: #eef6fb;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.member-card.show {
+  opacity: 1;
+  max-height: 500px; /* enough to show content */
+}
+
+.member-card p {
+  margin: 5px 0;
+}
+
+.member-card a {
+  color: #1e5f74;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.member-card a:hover {
+  color: #3498db;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .about-story {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .story-text {
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .story-image {
+    margin-top: 0;
+    margin-bottom: 40px;
+    width: 100%;
+    text-align: center;
+  }
+
+  .aboutus-image {
+    width: 80%;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 600px) {
+  .aboutus-image {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .about-intro h1 {
+    font-size: 2rem;
+  }
+
+  .story-text h2 {
+    font-size: 1.6rem;
+  }
+}
+
+

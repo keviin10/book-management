@@ -1,0 +1,126 @@
+.featured-books {
+  padding: 60px 0 80px;
+  background: white;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.featured-books h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.book-item-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.book-item {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  background: white;
+  cursor: pointer;
+}
+
+.book-item:hover {
+  border-color: #2c3e50;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  transform: translateY(-4px);
+}
+
+/* BIG CHANGE - Using more specific selector */
+.featured-books .book-image {
+  width: 100%;
+  height: 300px !important; /* Force the height */
+  overflow: hidden;
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  background: #f8f9fa;
+  position: relative;
+}
+
+.featured-books .book-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  display: block;
+}
+
+.book-item:hover .book-image img {
+  transform: scale(1.05);
+}
+
+.book-info {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.book-info strong {
+  font-size: 1.1rem;
+  color: #2c3e50;
+  display: block;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.book-author {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+.book-description {
+  color: #666;
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .books-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .featured-books {
+    padding: 40px 0 60px;
+  }
+  
+  .featured-books h2 {
+    font-size: 1.8rem;
+  }
+  
+  .books-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 400px;
+  }
+  
+  .featured-books .book-image {
+    height: 280px !important;
+  }
+  
+  .book-info {
+    padding: 1rem;
+  }
+}

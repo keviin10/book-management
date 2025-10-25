@@ -1,0 +1,156 @@
+.navbar {
+  background: #2c3e50;
+  padding: 1rem 0;
+  border-bottom: 1px solid #e0e0e0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #d1d1d1;
+}
+
+.nav-search {
+  display: flex;
+  align-items: center;
+}
+
+.nav-search-form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.nav-search-form input {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ced4da;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  width: 200px;
+}
+
+.nav-search-form button {
+  padding: 0.5rem;
+  background: white;
+  color: #2c3e50;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-search-form button:hover {
+  background: #ddd;
+}
+
+/* === Hamburger button (hidden by default) === */
+.menu-button {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 18px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.4s ease; /* smooth rotation */
+}
+
+.menu-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* Animation for open state */
+.menu-button.active .bar:nth-child(1) {
+  transform: rotate(180deg) translateY(6px);
+}
+.menu-button.active .bar:nth-child(2) {
+  transform: rotate(-180deg) translateY(0px);
+}
+.menu-button.active .bar:nth-child(3) {
+  transform: rotate(-180deg) translateY(-6px);
+}
+
+/* === Mobile view === */
+@media (max-width: 807px) {
+  .menu-button {
+    display: flex;
+  }
+
+  .nav-menu {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #2c3e50;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+  }
+
+  .nav-menu.open {
+    display: flex;
+    max-height: 500px; /* enough for all links */
+    opacity: 1;
+  }
+
+  .nav-link {
+    padding: 0.5rem 0;
+    width: 100%;
+    transition: color 0.3s, transform 0.3s;
+  }
+
+  .nav-link:hover {
+    color: #ffffff; /* golden/yellow hover */
+    transform: translateX(5px);
+  }
+
+  .nav-search {
+    display: none;
+  }
+}
